@@ -8,6 +8,7 @@ RUN python3 -m venv /opt/venv
 
 
 RUN . /opt/venv/bin/activate && pip install --upgrade pip
+RUN . /opt/venv/bin/activate && pip install flask
 WORKDIR /app
 COPY . /app
 RUN . /opt/venv/bin/activate && pip --no-cache-dir install -r requirements.txt
